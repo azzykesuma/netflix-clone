@@ -1,0 +1,16 @@
+.faq_container {
+    margin-top: 3em;
+
+    h2 {
+        text-align: center;
+    }
+
+    .accordion {
+        background-color: var(--nav);
+        color : white;
+    }
+
+    .faq_text {
+        font-size: 1.2em;
+    }
+}
