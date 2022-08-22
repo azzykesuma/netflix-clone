@@ -1,3 +1,7 @@
+@use '/styles/_mixins.scss' as *;
+
+$tablet : 600px;
+
 .main_container {
     height: 60vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../public/asset/banner_hero.jpeg');
@@ -5,6 +9,7 @@
     background-blend-mode: darken;
     background-size: cover;
     width : 100%;
+    border-bottom: 8px solid var(--nav);
 
     .hero__container {
         text-align: center;
@@ -17,6 +22,13 @@
         margin-top: 2em;
     }
 
+    .hero__header {
+        @include devices(tablet) {
+            font-size: 3em;
+            max-width: 20ch;
+        }
+    }
+
     .hero__header, 
     .hero__text {
         margin-block: unset;
@@ -27,9 +39,4 @@
         max-width: 30ch;
     }
 
-    .form {
-        background-color: white;
-        width : 100%;  
-        margin-bottom: 10px;
-    }
 }

@@ -1,0 +1,28 @@
+@use '/styles/_mixins.scss' as *;
+
+.footer {
+    padding-inline: 20px;
+    color : #737373;
+    margin-top: 4em;
+
+    @include devices(tablet) {
+        padding-inline : 5em;
+    }
+
+    .grid_container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding : unset;
+    }
+
+    li {
+        margin-block: .5em;
+        cursor: pointer;
+    }
+    
+    .form_footer {
+        margin-top: 2em;
+        padding: 10px;
+    }
+}
+

@@ -7,7 +7,7 @@ const TopNav = () => {
     <nav className={styles.nav}>
         <Image width='80px' height='20px' src={'/asset/logo.png'} />
         <div className={styles.nav__wrapper}>
-            <form>
+            <form className='form_lang_selection'>
                 <select name="lang" id="lang">
                     <option value="eng">English</option>
                     <option value="id">Bahasa Indonesia</option>

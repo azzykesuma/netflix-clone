@@ -1,5 +1,11 @@
+@use '/styles/_mixins.scss' as *;
+
 .faq_container {
     margin-top: 3em;
+
+    @include devices(tablet) {
+        padding-inline : 40px;
+    }
 
     h2 {
         text-align: center;
@@ -8,6 +14,8 @@
     .accordion {
         background-color: var(--nav);
         color : white;
+        margin-bottom: .5em;
+        border-radius: 0;
     }
 
     .faq_text {

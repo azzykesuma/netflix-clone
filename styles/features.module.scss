@@ -1,8 +1,27 @@
+@use '/styles/_mixins.scss' as *;
+
 .main_container {
     padding : 20px;
-    margin-top: 1em;
+    margin-top: 4em;
     text-align: center;
     border-bottom: 8px solid var(--nav);
+    display: flex;
+    flex-direction: column;
+
+    @include devices(tablet) {
+        padding-bottom: 4em;
+    }
+
+    .feature__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .imageContainer {
+        text-align: center;
+    }
 
     h2,h3 {
         max-width: 40ch;
@@ -10,10 +29,19 @@
 
     h2 {
         font-weight: 600;
+
+        @include devices(tablet) {
+            font-size: 3em;
+            margin: unset;
+        }
     }
 
     h3 {
         font-weight: 400;
+
+        @include devices(tablet) {
+            font-size: 1.5em;
+        }
     }
 
     .sub__container {
@@ -25,17 +53,26 @@
     .download_mock {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         gap : 10px;
         border: 1px solid #fff;
-        width : 250px;
+        width : 50%;
+        max-width: 400px;
         padding : 5px;
         border-radius: 5px;
         transform: translateY(-6em);
         background-color: #000;
 
+        @include devices(tablet) {
+            padding : 10px;
+        }
+
         h5 {
             margin-block: unset;
+
+            @include devices(tablet) {
+                font-size: 1.3em;
+            }
         }
     }
 }

@@ -18,19 +18,28 @@ const Features = ({title,subtitle,images,subImages} :compProps) => {
             <div className={styles.sub__container}>
                 <Image 
                 src={images}
-                width='350px'
-                height='300px'
+                layout='intrinsic'
+                className={styles.image}
                 />
                <Box className={styles.download_mock}>
-                    <Image 
-                    src={BoxShot}
-                    height='50px'
-                    width='40px'
-                    />
-                    <div>
-                        <h5>Stranger Things</h5>
-                        <h5>Downloading...</h5>
-                    </div>
+                    <Box
+                    sx={{
+                        display : 'flex',
+                        alignItems : 'center',
+                        gap : '20px',
+                        textAlign : 'left'
+                    }}
+                    >
+                        <Image 
+                        src={BoxShot}
+                        height='50px'
+                        width='40px'
+                        />
+                        <div>
+                            <h5>Stranger Things</h5>
+                            <h5>Downloading...</h5>
+                        </div>
+                    </Box>
                     <Image
                     src={subImages}
                     height='40px'
@@ -39,11 +48,13 @@ const Features = ({title,subtitle,images,subImages} :compProps) => {
                </Box>
             </div>
         ) : (
-            <Image 
-            src={images}
-            width='300px'
-            height='200px'
-            />
+            <Box className={styles.imageContainer}>
+                <Image 
+                src={images}
+                layout='intrinsic'
+                className={styles.image}
+                />
+            </Box>
         )}
     </section>
   )

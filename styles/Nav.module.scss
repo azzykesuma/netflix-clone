@@ -12,18 +12,5 @@
         gap : 10px;
     }
     
-    form {
-        width : 100%;
 
-        select {
-            width : 100%;
-            background-color: var(--nav);
-            border: 1px solid #fff;
-            padding : 5px;
-            
-            option {
-                background-color: var(--nav);
-            }
-        }
-    }
 }

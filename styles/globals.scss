@@ -1,4 +1,5 @@
 /* fonts */
+@use '/styles/_mixins.scss' as *;
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
 
 /* root */
@@ -24,6 +25,43 @@
   font-size: 1rem;
 }
 
+.form {
+  background-color: white;
+  width : 100%;  
+  margin-bottom: 10px;
+}
+
+.form_sub {
+  
+  @include devices(tablet) {
+    width: 70%;
+  }
+}
+
+.form_lang_selection {
+  width : 100%;
+
+  select {
+      width : 100%;
+      background-color: transparent;
+      border: 1px solid #fff;
+      padding : 5px;
+      
+      option {
+          background-color: var(--nav);
+      }
+  }
+}
+
+.form_footer {
+  margin-top: 2em;
+  width: 200px;
+
+  select {
+    padding : 15px;
+  }
+}
+
 html,
 body {
   padding: 0;
@@ -39,6 +77,10 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+li {
+  list-style: none;
 }
 
 @media (prefers-color-scheme: dark) {

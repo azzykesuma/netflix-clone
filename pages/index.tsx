@@ -5,13 +5,16 @@ import styles from '../styles/Home.module.scss'
 // component
 import Hero from '../Component/Hero/Hero'
 import Features from '../Component/Features'
+import FAQ from '../Component/FAQ'
+import EmailSub from '../Component/EmailSub'
+import Footer from '../Component/Footer'
 // images
 import tvImages from '../public/asset/tv.png'
 import mobileImages from '../public/asset/mobile.jpeg'
 import downloadGif from '../public/asset/download-icon.gif'
 import Devices from '../public/asset/device-pile.png'
 import KidsProfile from '../public/asset/kids.png'
-import FAQ from '../Component/FAQ'
+
 
 export interface compProps {
   title : string
@@ -55,6 +58,8 @@ const Home: NextPage = () => {
       />
 
       <FAQ />
+      <EmailSub />
+      <Footer />
     </>
   )
 }

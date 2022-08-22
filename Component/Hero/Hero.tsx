@@ -18,7 +18,7 @@ const Hero = () => {
                 id="email" 
                 label="Email Address" 
                 variant="filled"
-                className={styles.form}
+                className='form'
                 />
                 <Button className='main__button start__button' variant="contained" endIcon={<ArrowForwardIosIcon />}>
                     Get started
