@@ -20,9 +20,9 @@ const Hero = () => {
                 variant="filled"
                 className='form'
                 />
-                <Button className='main__button start__button' variant="contained" endIcon={<ArrowForwardIosIcon />}>
+                <button className='main__button start__button' variant="contained" endIcon={<ArrowForwardIosIcon />}>
                     Get started
-                </Button>
+                </button>
             </div>
         </div>
     </main>
