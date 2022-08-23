@@ -7,6 +7,10 @@
         padding-inline : 40px;
     }
 
+    @include devices(desktop) {
+        padding-inline : 200px;
+    }
+
     h2 {
         text-align: center;
     }
@@ -16,9 +20,17 @@
         color : white;
         margin-bottom: .5em;
         border-radius: 0;
+
+        @include devices(desktop) {
+            padding : 10px;
+        }
     }
 
     .faq_text {
         font-size: 1.2em;
+
+        @include devices(desktop) {
+            font-size: 1.6em;
+        }
     }
 }

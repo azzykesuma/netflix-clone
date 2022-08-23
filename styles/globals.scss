@@ -16,25 +16,50 @@
   border: none;
   border-radius: 3px;
   cursor: pointer;
+
+  @include devices(desktop) {
+    
+    padding : 10px;
+    font-size: 1.2em;
+  }
 }
 
 .start__button {
   padding : 10px;
   width : 140px;
   height : 40px;
-  font-size: 1rem;
+  font-size: 1em;
+
+  @include devices(desktop) {
+    border-radius: 0 3px 3px 0;
+    height : 53px;
+    width : 100%;
+    font-size: 1.5em;
+  }
 }
 
 .form {
   background-color: white;
   width : 100%;  
   margin-bottom: 10px;
+
+  @include devices(desktop) {
+    width : 400px;
+  }
 }
 
 .form_sub {
-  
-  @include devices(tablet) {
-    width: 70%;
+  width: 100%;
+}
+
+
+.form__wrapper {
+
+  @include devices(desktop) {
+      display: grid;
+      grid-template-columns: 400px 200px;
+      margin-inline : auto;
+      justify-items: center;
   }
 }
 
@@ -50,6 +75,10 @@
       option {
           background-color: var(--nav);
       }
+
+      @include devices(desktop) {
+        padding : 10px;
+      }
   }
 }
 
@@ -61,6 +90,14 @@
     padding : 15px;
   }
 }
+
+.reverse {
+
+  @include devices(desktop) {
+    flex-direction: row-reverse !important;
+  }
+}
+
 
 html,
 body {

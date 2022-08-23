@@ -10,6 +10,13 @@
 
     @include devices(tablet) {
         padding-bottom: 4em;
+        padding : 3em;
+    }
+
+    @include devices(desktop) {
+        flex-direction: row;
+        text-align: left;
+        justify-content: space-between;
     }
 
     .feature__wrapper {
@@ -17,10 +24,21 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+
+        @include devices(desktop) {
+            align-items: flex-start;
+        }
     }
 
     .imageContainer {
         text-align: center;
+
+        .image {
+
+            @include devices(desktop) {
+                width : 400px;
+            }
+        }
     }
 
     h2,h3 {
@@ -29,9 +47,15 @@
 
     h2 {
         font-weight: 600;
+        padding-bottom: 1em;
 
         @include devices(tablet) {
             font-size: 3em;
+            margin: unset;
+        }
+
+        @include devices(desktop) {
+            font-size: 4em;
             margin: unset;
         }
     }
@@ -41,6 +65,11 @@
 
         @include devices(tablet) {
             font-size: 1.5em;
+        }
+
+        @include devices(tablet) {
+            font-size: 1.8em;
+            margin: unset;
         }
     }
 
@@ -56,7 +85,6 @@
         justify-content: space-between;
         gap : 10px;
         border: 1px solid #fff;
-        width : 50%;
         max-width: 400px;
         padding : 5px;
         border-radius: 5px;
@@ -67,11 +95,17 @@
             padding : 10px;
         }
 
+        @include devices(desktop) {
+            width : 60%;
+            transform: translateY(-8em);
+        }
+
+
         h5 {
             margin-block: unset;
 
             @include devices(tablet) {
-                font-size: 1.3em;
+                font-size: 1em;
             }
         }
     }

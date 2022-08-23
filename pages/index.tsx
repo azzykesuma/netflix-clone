@@ -21,6 +21,7 @@ export interface compProps {
   subtitle : string
   images : any
   subImages? : any
+  reverse? : boolean
 }
 
 const Home: NextPage = () => {
@@ -43,6 +44,7 @@ const Home: NextPage = () => {
       subtitle='Save your favorites easily and always have something to watch.'
       images={mobileImages}
       subImages={downloadGif}
+      reverse={true}
       />
 
       <Features
@@ -55,6 +57,7 @@ const Home: NextPage = () => {
       title='Create profiles for kids.'
       subtitle='Send kids on adventures with their favorite characters in a space made just for them—free with your membership.'
       images={KidsProfile}
+      reverse={true}
       />
 
       <FAQ />

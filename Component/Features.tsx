@@ -1,4 +1,4 @@
-import { Box } from '@mui/material';
+import { Box, useMediaQuery  } from '@mui/material';
 import Image from 'next/image';
 import React from 'react'
 import { compProps } from '../pages/index'
@@ -6,10 +6,11 @@ import styles from '../styles/features.module.scss';
 // images
 import BoxShot from '../public/asset/boxshot.png'
 
-const Features = ({title,subtitle,images,subImages} :compProps) => {
+const Features = ({title,subtitle,images,subImages, reverse} :compProps) => {
+const matches = useMediaQuery('(min-width:980px)');
 
   return (
-    <section className={styles.main_container}>
+    <section className={ reverse ? `${styles.main_container} reverse` : styles.main_container}>
         <div className={styles.feature__wrapper}>
             <h2>{title}</h2>
             <h3>{subtitle}</h3>
@@ -20,6 +21,8 @@ const Features = ({title,subtitle,images,subImages} :compProps) => {
                 src={images}
                 layout='intrinsic'
                 className={styles.image}
+                width={matches ? '700px' : '500px'}
+                height='500px'
                 />
                <Box className={styles.download_mock}>
                     <Box
@@ -32,8 +35,8 @@ const Features = ({title,subtitle,images,subImages} :compProps) => {
                     >
                         <Image 
                         src={BoxShot}
-                        height='50px'
-                        width='40px'
+                        height={matches ? '70px' : '50px'}
+                        width={matches ? '60px' : '40px'}
                         />
                         <div>
                             <h5>Stranger Things</h5>

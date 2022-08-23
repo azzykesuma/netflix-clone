@@ -13,7 +13,7 @@ const Hero = () => {
             <h1 className={styles.hero__header}>Unlimited movies, TV, shows, and more.</h1>
             <p className={styles.hero__text}>Watch anywhere. Cancel anytime</p>
             <p className={styles.hero__text}>Ready to watch? Enter your email to create or restart your membership.</p>
-            <div className={styles.form__wrapper}>
+            <div className='form__wrapper'>
                 <TextField
                 id="email" 
                 label="Email Address" 
