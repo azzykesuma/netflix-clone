@@ -23,6 +23,7 @@ const matches = useMediaQuery('(min-width:980px)');
                 className={styles.image}
                 width={matches ? '700px' : '500px'}
                 height='500px'
+                alt='image-features-netflix'
                 />
                <Box className={styles.download_mock}>
                     <Box
@@ -37,6 +38,7 @@ const matches = useMediaQuery('(min-width:980px)');
                         src={BoxShot}
                         height={matches ? '70px' : '50px'}
                         width={matches ? '60px' : '40px'}
+                        alt='image-boxshot'
                         />
                         <div>
                             <h5>Stranger Things</h5>
@@ -47,6 +49,7 @@ const matches = useMediaQuery('(min-width:980px)');
                     src={subImages}
                     height='40px'
                     width='40px'
+                    alt='loading-gif'
                     />
                </Box>
             </div>
@@ -56,6 +59,7 @@ const matches = useMediaQuery('(min-width:980px)');
                 src={images}
                 layout='intrinsic'
                 className={styles.image}
+                alt='image-features-netflix'
                 />
             </Box>
         )}

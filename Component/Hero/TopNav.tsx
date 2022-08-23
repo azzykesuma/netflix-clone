@@ -5,10 +5,15 @@ import styles from '../../styles/Nav.module.scss'
 const TopNav = () => {
   return (
     <nav className={styles.nav}>
-        <Image width='80px' height='20px' src={'/asset/logo.png'} />
+        <Image 
+        width='80px'
+        height='20px'
+        src={'/asset/logo.png'}
+        alt='netflix-logo'
+        />
         <div className={styles.nav__wrapper}>
             <form className='form_lang_selection'>
-                <select name="lang" id="lang">
+                <select name="lang">
                     <option value="eng">English</option>
                     <option value="id">Bahasa Indonesia</option>
                 </select>

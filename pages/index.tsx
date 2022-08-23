@@ -1,7 +1,5 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.scss'
 // component
 import Hero from '../Component/Hero/Hero'
 import Features from '../Component/Features'
@@ -30,6 +28,8 @@ const Home: NextPage = () => {
       <Head>
         <title>Netflix-clone</title>
         <link href='/asset/icon.jfif' rel="icon" type ="image/x-icon" />
+        <meta content='text/html' charSet='utf-8'  />
+        <meta name='description' content='this is a netflix clone for learning purpose only'/>
       </Head>
       <Hero />
 

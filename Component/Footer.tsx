@@ -29,7 +29,7 @@ const Footer = () => {
         </Box>
 
         <form className='form_lang_selection form_footer'>
-            <select name="lang" id="lang">
+            <select name="lang">
                 <option value="eng">English</option>
                 <option value="id">Bahasa Indonesia</option>
             </select>
